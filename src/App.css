@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.ck-editor .ck-editor__editable {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm !important;
+  margin: 10mm !important;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  background-color: white;
+}
+
+.ck-editor .ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+  border: 1px solid #a1a1a1;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+.ck .ck-editor__main {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.ck .ck-editor__top {
+  display: flex;
+  justify-content: center;
+  position: sticky !important;
+  top: 0;
+  z-index: 2;
+  background-color: #f3f3f3 !important;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
+
+.ck .ck-sticky-panel__content {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f3f3f3 !important;
+  border-bottom: 1px solid #d9d9d9;
+  border-inline: none !important;
+}
+
+.ck.ck-toolbar {
+  border: none !important;
+  background-color: #f3f3f3 !important;
+}
+
+.ck .ck-toolbar .ck-toolbar_grouping {
+  background-color: #f3f3f3 !important;
+}
+
+.ck-editor__editable .ck-focused {
+  border: none !important;
+  background-color: red !important;
+}
+
+@media (max-width: 600px) {
+  .ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items {
+    flex-wrap: wrap !important;
+  }
+
+  .ck-editor .ck-editor__editable {
+    margin: 1rem !important;
+  }
+}
